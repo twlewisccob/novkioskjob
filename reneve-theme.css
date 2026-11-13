@@ -1,0 +1,237 @@
+:root {
+  --bg-950: #050B14;
+  --bg-900: #0A1624;
+  --bg-800: #112234;
+  --panel: #12273B;
+  --panel-strong: #0B1A2C;
+  --line: rgba(146, 175, 201, 0.22);
+  --text: #ECF7FF;
+  --muted: #B7CADB;
+  --accent: #D4A63A;
+  --accent-soft: #F6D98B;
+  --accent-2: #5EE7D8;
+  --accent-3: #9C7BFF;
+  --shadow: rgba(3, 8, 18, 0.42);
+
+  --canyon-deep: var(--bg-950);
+  --canyon-purple: var(--bg-900);
+  --canyon-plum: var(--bg-800);
+  --canyon-rose: var(--panel);
+  --gold: var(--accent);
+  --gold-dim: var(--accent-soft);
+  --paper: var(--text);
+  --ink: var(--bg-950);
+  --ink-soft: var(--muted);
+  --lilac: var(--muted);
+  --up: var(--accent-2);
+}
+
+html,
+body {
+  background: linear-gradient(160deg, var(--bg-950) 0%, var(--bg-900) 28%, var(--bg-800) 100%);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+}
+
+.strata {
+  background: linear-gradient(160deg, var(--bg-950) 0%, var(--bg-900) 28%, var(--bg-800) 100%);
+}
+
+.strata::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.52;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(212, 166, 58, 0.7) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 26% 72%, rgba(94, 231, 216, 0.7) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 52% 18%, rgba(156, 123, 255, 0.75) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 74% 62%, rgba(255, 162, 211, 0.75) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 90% 34%, rgba(94, 231, 216, 0.8) 0 2px, transparent 2.8px);
+  background-size: 280px 260px, 330px 300px, 360px 280px, 290px 320px, 380px 300px;
+  background-position: 0 0, 80px 40px, 120px 100px, 30px 170px, 190px 10px;
+}
+
+h1,
+.panel-title,
+.stat-chip .stat-value,
+.job-rank,
+.modal-card h3 {
+  font-family: 'Outfit', sans-serif;
+}
+
+.ticker-item,
+.major-btn .count,
+.week-chip,
+.job-company,
+.modal-job-list li span,
+.keyboard-key {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.major-btn,
+.btn-gold,
+.keyboard-clear,
+.modal-input {
+  font-family: 'Outfit', sans-serif;
+}
+
+.stat-chip,
+.majors,
+.panel {
+  background: rgba(11, 26, 42, 0.78);
+  border-color: var(--line);
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+.major-btn {
+  background: rgba(18, 39, 58, 0.72);
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.major-btn:hover,
+.job:hover,
+.event-card:hover {
+  background: rgba(94, 231, 216, 0.08);
+  border-color: rgba(94, 231, 216, 0.52);
+}
+
+.major-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.panel-head {
+  border-bottom-color: var(--line);
+}
+
+.week-chip {
+  color: var(--accent-soft);
+  border-color: rgba(246, 217, 139, 0.48);
+}
+
+.job {
+  background: linear-gradient(135deg, rgba(16, 30, 46, 0.93), rgba(10, 19, 30, 0.9));
+  border-color: rgba(110, 156, 196, 0.28);
+  border-radius: 24px;
+}
+
+.job.checked {
+  background: rgba(212, 166, 58, 0.14);
+  border-color: rgba(246, 217, 139, 0.65);
+}
+
+.job-check .box {
+  border-color: rgba(146, 175, 201, 0.48);
+  background: rgba(11, 26, 42, 0.78);
+}
+
+.job-check input:checked ~ .box {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.job-rank {
+  background: rgba(94, 231, 216, 0.1);
+  color: var(--accent-soft);
+}
+
+.job-link {
+  color: var(--accent-soft);
+  border-color: rgba(246, 217, 139, 0.48);
+}
+
+.job-link:hover {
+  background: rgba(94, 231, 216, 0.08);
+}
+
+.selection-bar {
+  background: rgba(11, 26, 42, 0.94);
+  border-color: rgba(246, 217, 139, 0.48);
+  box-shadow: 0 12px 32px var(--shadow);
+}
+
+.selection-count b {
+  color: var(--accent-soft);
+}
+
+.btn-gold,
+.keyboard-key:active {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--ink);
+}
+
+.btn-gold:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent-soft);
+}
+
+.modal-overlay {
+  background: rgba(3, 8, 18, 0.78);
+}
+
+.modal-card {
+  background: linear-gradient(160deg, rgba(18, 39, 59, 0.98), rgba(5, 11, 20, 0.98));
+  border-color: var(--line);
+  box-shadow: 0 24px 48px var(--shadow);
+}
+
+.modal-job-list li {
+  background: rgba(11, 26, 42, 0.78);
+  border-color: var(--line);
+}
+
+.modal-input,
+.keyboard-key {
+  background: rgba(11, 26, 42, 0.78);
+  border-color: var(--line);
+}
+
+.modal-input:focus {
+  border-color: var(--accent-soft);
+}
+
+.email-keyboard {
+  background: linear-gradient(160deg, rgba(18, 39, 59, 0.99), rgba(5, 11, 20, 0.99));
+  border-color: rgba(246, 217, 139, 0.58);
+  box-shadow: 0 18px 48px var(--shadow);
+}
+
+.keyboard-key {
+  border-color: var(--line);
+}
+
+.keyboard-key:hover,
+.keyboard-key:focus-visible {
+  background: rgba(94, 231, 216, 0.12);
+  border-color: rgba(94, 231, 216, 0.55);
+}
+
+.modal-status.success {
+  color: var(--accent-2);
+}
+
+.modal-status.error {
+  color: #FF8080;
+}
+
+#backBtn,
+.modal-close {
+  background: rgba(11, 26, 42, 0.78);
+  border-color: var(--line);
+  color: var(--accent-soft);
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+#backBtn:hover,
+.modal-close:hover {
+  background: rgba(94, 231, 216, 0.12);
+  border-color: rgba(94, 231, 216, 0.55);
+}
+
+#backBtn svg {
+  color: var(--accent-soft);
+}
